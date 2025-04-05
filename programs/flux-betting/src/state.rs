@@ -81,6 +81,7 @@ pub struct InitializePlatform<'info> {
     #[account(mut)]
     pub admin: Signer<'info>,
     
+    /// CHECK: This is the treasury account that will receive fees. It's safe because we're just storing its address.
     pub treasury: UncheckedAccount<'info>,
     
     pub system_program: Program<'info, System>,
